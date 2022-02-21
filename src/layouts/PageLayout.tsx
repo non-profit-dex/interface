@@ -1,7 +1,7 @@
 import React from 'react';
 import { Box } from '@material-ui/core';
 import { makeStyles } from '@material-ui/core/styles';
-import { Header, Footer, BetaWarningBanner } from 'components';
+import { Header, Footer } from 'components';
 import Background from './Background';
 
 const useStyles = makeStyles(({ palette, breakpoints }) => ({
@@ -34,7 +34,6 @@ const PageLayout: React.FC<PageLayoutProps> = ({ children }) => {
 
   return (
     <Box className={classes.page}>
-      <BetaWarningBanner />
       <Header />
       <Background fallback={false} />
       <Box className={classes.pageWrapper}>{children}</Box>

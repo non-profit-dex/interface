@@ -8,8 +8,6 @@ import {
 import { Provider } from 'react-redux';
 import { GelatoProvider } from '@gelatonetwork/limit-orders-react';
 import store from 'state';
-const DragonPage = lazy(() => import('./pages/DragonPage'));
-const FarmPage = lazy(() => import('./pages/FarmPage'));
 const LandingPage = lazy(() => import('./pages/LandingPage'));
 const PoolsPage = lazy(() => import('./pages/PoolsPage'));
 const SwapPage = lazy(() => import('./pages/SwapPage'));
@@ -125,16 +123,6 @@ const App: React.FC = () => {
                     <Route exact path='/pools'>
                       <PageLayout>
                         <PoolsPage />
-                      </PageLayout>
-                    </Route>
-                    <Route exact path='/farm'>
-                      <PageLayout>
-                        <FarmPage />
-                      </PageLayout>
-                    </Route>
-                    <Route exact path='/dragons'>
-                      <PageLayout>
-                        <DragonPage />
                       </PageLayout>
                     </Route>
                     <Route exact path='/analytics'>
