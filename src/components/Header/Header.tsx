@@ -266,39 +266,9 @@ const Header: React.FC = () => {
       text: 'Pool',
       id: 'pools-page-link',
     },
-    {
-      link: '/analytics',
-      text: 'Analytics',
-      id: 'analytics-page-link',
-    },
   ];
 
-  const outLinks: any[] = [
-    // {
-    //   link: '/',
-    //   text: 'Governance',
-    // },
-    // {
-    //   link: '/',
-    //   text: 'Docs',
-    // },
-    // {
-    //   link: '/',
-    //   text: 'For Developers',
-    // },
-    // {
-    //   link: '/',
-    //   text: 'Help & Tutorials',
-    // },
-    // {
-    //   link: '/',
-    //   text: 'Knowledge Base',
-    // },
-    // {
-    //   link: '/',
-    //   text: 'News',
-    // },
-  ];
+  const outLinks: any[] = [];
 
   return (
     <Box className={classes.header}>
@@ -401,16 +371,6 @@ const Header: React.FC = () => {
         </Box>
       )}
       <Box>
-        <Box
-          width={36}
-          height={36}
-          display='flex'
-          alignItems='center'
-          justifyContent='center'
-          marginRight={1}
-        >
-          <LightIcon />
-        </Box>
         {account && (!ethereum || isSupportedNetwork(ethereum)) ? (
           <Box
             id='web3-status-connected'

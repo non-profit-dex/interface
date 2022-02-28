@@ -183,10 +183,10 @@ export const GlobalData = {
       ...WETH_ONLY,
       [ChainId.MATIC]: [
         ...WETH_ONLY[ChainId.MATIC],
-        returnTokenFromKey('DAI'),
+        returnTokenFromKey('TORAt'),
         returnTokenFromKey('USDC'),
         returnTokenFromKey('USDT'),
-        returnTokenFromKey('QUICK'),
+        returnTokenFromKey('JPYCt'),
         returnTokenFromKey('ETHER'),
         returnTokenFromKey('WBTC'),
       ],
