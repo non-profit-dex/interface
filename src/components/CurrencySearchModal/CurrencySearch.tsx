@@ -267,7 +267,7 @@ const CurrencySearch: React.FC<CurrencySearchProps> = ({
         <AutoSizer disableWidth>
           {({ height }) => (
             <CurrencyList
-              showETH={showETH}
+              showETH={false}
               height={height}
               currencies={filteredSortedTokens}
               onCurrencySelect={handleCurrencySelect}

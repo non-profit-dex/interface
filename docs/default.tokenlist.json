@@ -24,7 +24,7 @@
       "symbol": "Y-TORA",
       "name": "Y-TORA Coin",
       "chainId": 137,
-      "logoURI": "https://assets.coingecko.com/coins/images/14634/small/IQgaRw0.png?1622439620"
+      "logoURI": "https://nuko.works/static/media/0xafdcc3faba75226c716e2fa552f5b045b48d15cc.png"
     },
     {
       "address": "0x7c839835368Aab17e46eDD1603231EDb5733Af7D",
@@ -32,7 +32,7 @@
       "symbol": "D-TORA",
       "name": "D-TORA Coin",
       "chainId": 137,
-      "logoURI": "https://assets.coingecko.com/coins/images/14634/small/IQgaRw0.png?1622439620"
+      "logoURI": "https://nuko.works/static/media/0x7c839835368aab17e46edd1603231edb5733af7d.png"
     },
     {
       "name": "USD Coin",

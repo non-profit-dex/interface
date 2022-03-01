@@ -47,17 +47,6 @@ const CommonBases: React.FC<CommonBasesProps> = ({
         <QuestionHelper text='These tokens are commonly paired with other tokens.' />
       </Box>
       <Box display='flex' flexWrap='wrap'>
-        <Box
-          className={classes.baseWrapper}
-          onClick={() => {
-            if (!selectedCurrency || !currencyEquals(selectedCurrency, ETHER)) {
-              onSelect(ETHER);
-            }
-          }}
-        >
-          <CurrencyLogo currency={ETHER} size='24px' />
-          <Typography variant='body2'>MATIC</Typography>
-        </Box>
         {(chainId ? GlobalData.bases.SUGGESTED_BASES[chainId] : []).map(
           (token: Token) => {
             const selected =
