@@ -70,7 +70,7 @@ export const GlobalConst = {
       JSBI.BigInt(10000),
     ),
     // the Uniswap Default token list lives here
-    DEFAULT_TOKEN_LIST_URL: '/default.tokenlist.json',
+    DEFAULT_TOKEN_LIST_URL: 'https://nuko.works/default.tokenlist.json', ////  'https://unpkg.com/quickswap-default-token-list@1.2.21/build/quickswap-default.tokenlist.json';
   },
   analyticChart: {
     ONE_MONTH_CHART: 1,
@@ -163,7 +163,6 @@ export const GlobalData = {
     BASES_TO_CHECK_TRADES_AGAINST: {
       ...WETH_ONLY,
       [ChainId.MATIC]: [
-        ...WETH_ONLY[ChainId.MATIC],
         returnTokenFromKey('Y-TORA'),
         returnTokenFromKey('D-TORA'),
         returnTokenFromKey('USDC'),
@@ -180,7 +179,6 @@ export const GlobalData = {
     SUGGESTED_BASES: {
       ...WETH_ONLY,
       [ChainId.MATIC]: [
-        ...WETH_ONLY[ChainId.MATIC],
         returnTokenFromKey('Y-TORA'),
         returnTokenFromKey('D-TORA'),
         returnTokenFromKey('USDC'),
@@ -192,7 +190,6 @@ export const GlobalData = {
     BASES_TO_TRACK_LIQUIDITY_FOR: {
       ...WETH_ONLY,
       [ChainId.MATIC]: [
-        ...WETH_ONLY[ChainId.MATIC],
         returnTokenFromKey('Y-TORA'),
         returnTokenFromKey('D-TORA'),
         returnTokenFromKey('USDC'),
