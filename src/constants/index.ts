@@ -70,8 +70,7 @@ export const GlobalConst = {
       JSBI.BigInt(10000),
     ),
     // the Uniswap Default token list lives here
-    DEFAULT_TOKEN_LIST_URL:
-      'https://unpkg.com/quickswap-default-token-list@1.2.21/build/quickswap-default.tokenlist.json',
+    DEFAULT_TOKEN_LIST_URL: '/default.tokenlist.json',
   },
   analyticChart: {
     ONE_MONTH_CHART: 1,
@@ -165,30 +164,28 @@ export const GlobalData = {
       ...WETH_ONLY,
       [ChainId.MATIC]: [
         ...WETH_ONLY[ChainId.MATIC],
+        returnTokenFromKey('Y-TORA'),
+        returnTokenFromKey('D-TORA'),
         returnTokenFromKey('USDC'),
         returnTokenFromKey('USDT'),
-        returnTokenFromKey('QUICK'),
-        returnTokenFromKey('ETHER'),
-        returnTokenFromKey('WBTC'),
-        returnTokenFromKey('DAI'),
-        returnTokenFromKey('MAUSDC'),
-        returnTokenFromKey('MI'),
-        returnTokenFromKey('EROWAN'),
+        returnTokenFromKey('JPYC'),
       ],
     },
     // Some tokens can only be swapped via certain pairs, so we override the list of bases that are considered for these tokens.
-    CUSTOM_BASES: { [ChainId.MATIC]: undefined, [ChainId.MUMBAI]: undefined },
+    CUSTOM_BASES: {
+      [ChainId.MATIC]: undefined,
+      [ChainId.MUMBAI]: undefined,
+    },
     // used for display in the default list when adding liquidity
     SUGGESTED_BASES: {
       ...WETH_ONLY,
       [ChainId.MATIC]: [
         ...WETH_ONLY[ChainId.MATIC],
-        returnTokenFromKey('TORAt'),
+        returnTokenFromKey('Y-TORA'),
+        returnTokenFromKey('D-TORA'),
         returnTokenFromKey('USDC'),
         returnTokenFromKey('USDT'),
-        returnTokenFromKey('JPYCt'),
-        returnTokenFromKey('ETHER'),
-        returnTokenFromKey('WBTC'),
+        returnTokenFromKey('JPYC'),
       ],
     },
     // used to construct the list of all pairs we consider by default in the frontend
@@ -196,12 +193,11 @@ export const GlobalData = {
       ...WETH_ONLY,
       [ChainId.MATIC]: [
         ...WETH_ONLY[ChainId.MATIC],
-        returnTokenFromKey('DAI'),
+        returnTokenFromKey('Y-TORA'),
+        returnTokenFromKey('D-TORA'),
         returnTokenFromKey('USDC'),
         returnTokenFromKey('USDT'),
-        returnTokenFromKey('QUICK'),
-        returnTokenFromKey('ETHER'),
-        returnTokenFromKey('WBTC'),
+        returnTokenFromKey('JPYC'),
       ],
     },
   },
@@ -209,13 +205,9 @@ export const GlobalData = {
     PINNED_PAIRS: {
       [ChainId.MATIC]: [
         [returnTokenFromKey('USDC'), returnTokenFromKey('USDT')],
-        [returnTokenFromKey('USDC'), returnTokenFromKey('DAI')],
-        [returnTokenFromKey('ETHER'), returnTokenFromKey('USDC')],
-        [returnTokenFromKey('WBTC'), returnTokenFromKey('ETHER')],
-        [WETH[ChainId.MATIC], returnTokenFromKey('USDT')],
-        [WETH[ChainId.MATIC], returnTokenFromKey('USDC')],
-        [WETH[ChainId.MATIC], returnTokenFromKey('ETHER')],
-        [returnTokenFromKey('ETHER'), returnTokenFromKey('QUICK')],
+        [returnTokenFromKey('USDC'), returnTokenFromKey('JPYC')],
+        [returnTokenFromKey('D-TORA'), returnTokenFromKey('Y-TORA')],
+        [returnTokenFromKey('Y-TORA'), returnTokenFromKey('JPYC')],
       ],
       [ChainId.MUMBAI]: undefined,
     },
